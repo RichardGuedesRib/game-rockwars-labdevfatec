@@ -15,6 +15,8 @@ Game created for the evaluation part of the web development laboratory course at
 ## Demonstração do Resultado Final
 The game is simple and remembers old games from the Atari era. The objective is to survive the rocks while destroying them. There are five levels with twenty rocks in each one. Simple game to introduce GameMaker.
 
+Show in: https://richardguedesrib.github.io/game-rockwars-labdevfatec/
+
 ![Imagem do Site + Jogo](https://github.com/RichardGuedesRib/game-rockwars-labdevfatec/blob/main/assets/img/ImagemSite.png)
 
 
