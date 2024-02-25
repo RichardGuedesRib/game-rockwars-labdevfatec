@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RockWars</title>
+
+    <!-- Styles e Resets css -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <header class="container-header" id="container-header-id">
+        <span class="container-img-spaceship">
+          <img class="img-nave" src="assets/img/nave.png" alt="" />
+        </span>
+        <span class="title-game"><p class="text-title-game">RockWars</p></span>
+        <span class="container-img-meteor"
+          ><img class="img-meteor" src="assets/img/asteroides.jpg" alt=""
+        /></span>
+      </header>
+
+      <section class="container-body">
+        <article class="container-body-left">
+          <span class="title-menu-left">Como Jogar?</span>
+          <section class="container-btn-menu">
+            <a href="#about-game" class="btn-menu">Sobre o Jogo</a>
+            <a href="#objective" class="btn-menu">Objetivo</a>
+            <a href="#lifes" class="btn-menu">Vidas</a>
+            <a href="#rocks" class="btn-menu">Meteoros</a>
+          </section>
+        </article>
+        <article class="container-body-middle">
+          <iframe
+            src="rockwars.html"
+            frameborder="0"
+            class="frame-game"
+            scrolling="no"
+          ></iframe>
+        </article>
+        <article class="container-body-right">
+          <span class="title-menu-left">Como Desenvolver o Jogo?</span>
+          <section class="container-btn-menu">
+            <a href="#assets" class="btn-menu menu-right"
+              >Introdução e Imagens</a
+            >
+            <a href="#sprites" class="btn-menu menu-right">Sprites</a>
+            <a href="#spaceship" class="btn-menu menu-right"
+              >Criando e Configurando a Nave</a
+            >
+            <a href="#rock" class="btn-menu menu-right"
+              >Criando e Configurando as Rochas</a
+            >
+            <a href="#laser" class="btn-menu menu-right">
+              Criando e Configurando o Laser
+            </a>
+            <a href="#explosion" class="btn-menu menu-right">
+              Criando e Configurando a Explosão
+            </a>
+            <a href="#score" class="btn-menu menu-right">
+              Criando e Configurando o Sistema de Score
+            </a>
+          </section>
+        </article>
+      </section>
+
+      <section class="container-how-play">
+        <span class="title-section-how-play">Como Jogar?</span>
+
+        <aside class="section-tutorial-game" id="about-game">
+          <span class="span-about-img"
+            ><img src="assets/img/atari.gif" alt=""
+          /></span>
+          <span class="span-about"
+            ><p class="text-how-play">
+              RockWars é um jogo simples desenvolvido em GameMaker como
+              atividade da matéria de Laboratório Web. O Jogo é baseado em jogos
+              antigos de Atari, cujo objetivo é destruir todas rochas e meteoros
+              e passar para o próximo nível
+            </p></span
+          >
+        </aside>
+
+        <aside class="section-tutorial-game" id="objective">
+          <span class="span-about"
+            ><p class="text-how-play">
+              Sobreviva a chuva de meteoros e com seu incrível poder de
+              destruição acabe com todos eles.
+            </p></span
+          >
+          <span class="span-about-img jogo1"
+            ><img class="img-tutorial" src="assets/img/jogo1.png" alt=""
+          /></span>
+        </aside>
+
+        <aside class="section-tutorial-game" id="lifes">
+          <span class="span-about"
+            ><p class="text-how-play">
+              O desafio é claro. Destrua os meteoros antes que eles te acertem!
+              Um meteoro e já é o suficiente para explodir.
+            </p></span
+          >
+          <span class="span-about-img jogo1"
+            ><img class="img-tutorial" src="assets/img/jogo2.png" alt=""
+          /></span>
+        </aside>
+
+        <aside class="section-tutorial-game" id="rocks">
+          <span class="span-about-img jogo1"
+            ><img class="img-tutorial" src="assets/img/jogo3.png" alt=""
+          /></span>
+          <span class="span-about"
+            ><p class="text-how-play">
+              A mecânica é feita por um spawn de 20 meteoros com velocidades
+              diferentes. Os meteoros retornarão até que sejam destruidos. Basta
+              que um tiro acerte o meteoro para que ele exploda
+            </p></span
+          >
+        </aside>
+        <span class="title-section-how-play">Como Desenvolver o Jogo?</span>
+
+        <aside class="section-tutorial-game" id="assets">
+          <span class="span-about-img jogo1 dev-img">
+            <img class="img-tutorial" src="assets/img/egg.png" alt="" />
+            <img
+              class="img-tutorial img-spaceship"
+              src="assets/img/aviao.png"
+              alt=""
+            />
+            <img class="img-tutorial" src="assets/img/explosao.png" alt="" />
+          </span>
+
+          <span class="span-about"
+            ><p class="text-how-play">
+              Introdução e Imagens <br /><br />
+              Desenvolver um game nesse estilo é algo sem mistério e com um
+              pouco de persistência pode-se facilmente fazer. O primeiro passo é
+              definir o estilo de jogo. Como dito em "Sobre o jogo", a ideia era
+              reproduzir um jogo no estilo de atari onde uma nave explode os
+              meteoros. Então tendo em vista isso, vamos atrás dos assets
+              necessários. <br />
+              No caso de RockWars, conseguimos todos os recursos necessários no
+              site egg png (https://www.pngegg.com/pt).
+              <br />
+
+              Caso queira alguma animação, podemos optar em frames que já vem
+              prontos e editamos os movimentos conforme necessitamos. Perceba
+              nas imagens ao lado que a sequencia já vem os quadros com os
+              movimentos necessários.
+            </p></span
+          >
+        </aside>
+
+        <aside class="section-tutorial-game" id="sprites">
+          <span class="span-about-img jogo1 dev-img">
+            <img class="img-tutorial tuto" src="assets/img/tuto1.png" alt="" />
+            <img class="img-tutorial tuto" src="assets/img/tuto2.png" alt="" />
+            <img class="img-tutorial tuto" src="assets/img/tuto3.png" alt="" />
+            <img class="img-tutorial tuto" src="assets/img/tuto5.png" alt="" />
+          </span>
+
+          <span class="span-about"
+            ><p class="text-how-play">
+              Sprites <br /><br />
+              Com a ideia e as imagens prontas, criamos os sprites de cada
+              elemento. É uma boa pratica utilizar a letra "s" minúscula antes
+              do nome da Sprint para melhor legibilidade do código. Para criar
+              uma Sprint, No GameMaker, na seção sprints, com o botão direito
+              criamos uma nova Sprint. Basta importar a imagem e salvar e está
+              pronto o Sprint.
+              <br />
+              <br />
+              Para os Sprites que serão animados, faremos a criação dos frames.
+              Após importar a imagem com conjunto de frames, selecionamos editar
+              imagem, no menu superior em imagem, e converter para quadros.
+              <br />
+              Após isso, basta configurar a moldura dos tamanhos dos quadros e
+              converter. Faça isso com todos os elementos que o jogo fará uso.
+            </p></span
+          >
+        </aside>
+
+        <aside class="section-tutorial-game" id="spaceship">
+          <span class="span-about-img jogo1 dev-img">
+            <img
+              class="img-tutorial tuto"
+              src="assets/img/criandoobjeto.png"
+              alt=""
+            />
+            <img
+              class="img-tutorial tuto"
+              src="assets/img/criandonave.png"
+              alt=""
+            />
+            <img
+              class="img-tutorial tuto"
+              src="assets/img/criandonave2.png"
+              alt=""
+            />
+            <img
+              class="img-tutorial tuto"
+              src="assets/img/criandonave3.png"
+              alt=""
+            />
+            <img
+              class="img-tutorial tuto"
+              src="assets/img/criandonave4.png"
+              alt=""
+            />
+            <img
+              class="img-tutorial tuto"
+              src="assets/img/criandonave5.png"
+              alt=""
+            />
+          </span>
+
+          <span class="span-about"
+            ><p class="text-how-play">
+              Criando e Configurando a Nave <br /><br />
+              Após a criação das Sprints, vamos criar os objetos e suas
+              respectivas funções. O primeiro a ser criado é a nave, para isso,
+              em recursos, clicamos com botao direito em objetos e criamos um
+              novo objeto. Depois, escolhemos um nome e adicionamos a Sprite
+              referente a nave. <br />
+              Após a criação da nave, vamos criar a função para movimenta-la.
+              Adicionamos um evento em steaps (ou etapas).
+              <br />
+              <br />
+              No evento etapas, podemos verificar o método na imagem ao lado.
+              Estamos pedindo para que seja armazenado nas variaveis hspd e vspd
+              toda vez que o teclado detectar as teclas de direção (ou awsd) e
+              armazene. Após isso esse evento deve somar nos eixos x e y os
+              valores armazenados. Ou seja, para cima, ele soma movimentos para
+              cima e assim respectivamente.
+              <br />
+              <br />
+              Abaixo pedimos para novamente, quando detectar que as teclas de
+              movimento para cima ou para baixo, (ou w e s), ele defina uma nova
+              Sprint base, que no caso é a sprint feita para simular a nave se
+              movendo.
+              <br />
+              <br />
+              Finalizados os movimentos da nave, iremos fazer ela atirar o
+              laser. Dentro de cada objeto, podemos agendar "alarmes", que farão
+              algo a cada certo tempo. Então adicionamos um novo alarme, no caso
+              escolhi o número 0.
+              <br />
+              <br />
+              Podemos ver conforme imagem ao lado, criamos uma variável chamada
+              laserInstance, e nela pedimos para criar uma nova instancia nos
+              eixos x e y (a partir do ponto central do objeto nave), dentro da
+              camada Instances, e passamos o nome do objeto. Após setamos a
+              direção como 0 e dizemos a velocidade ao qual será criado. Em
+              seguida, chamamos o Alarm[0] novamente, passando a variavel de
+              intervalos que veremos a seguir, dessa forma criando um looping e
+              consequentemente os disparos.
+              <br />
+              <br />
+              Após configurar o alarm[0], vamos adicionar o evento que irá
+              chamar esse alarm. Adicionamos um evento do tipo criar, nele
+              executa-se tudo o que está definido ao criar o objeto nave.
+              Criamos uma variavel, shotInterval, ela irá armazenar o intervalo
+              de cada tiro, escolhemos a velocidade 10 (frames), em seguinda,
+              chamamos a função do alarm[0] passando o intervalo setado na
+              variável. Também definimos um contador, para o próximo nivel em 0.
+              <br />
+              <br /></p
+          ></span>
+        </aside>
+
+        <aside class="section-tutorial-game" id="rock">
+          <span class="span-about-img jogo1 dev-img">
+            <img
+              class="img-tutorial tuto"
+              src="assets/img/criandorocha1.png"
+              alt=""
+            />
+            <img
+              class="img-tutorial tuto"
+              src="assets/img/criandorocha2.png"
+              alt=""
+            />
+            <img class="img-tutorial tuto" src="assets/img/rochas.png" alt="" />
+            <img
+              class="img-tutorial tuto"
+              src="assets/img/funcaorochas.png"
+              alt=""
+            />
+            <img
+              class="img-tutorial tuto"
+              src="assets/img/criandorocha4.png"
+              alt=""
+            />
+            <img
+              class="img-tutorial tuto"
+              src="assets/img/criandorocha5.png"
+              alt=""
+            />
+          </span>
+
+          <span class="span-about"
+            ><p class="text-how-play">
+              Criando e Configurando as Rochas <br /><br />
+              Para a criação das Rochas, usaremos a mesma lógica dos frames da
+              nave. Então vamos pular para as funções e eventos.
+              <br />
+              <br />
+              No evento criar, utilizaremos a lógica: Bem, sabemos que será uma
+              chuva de meteoros, e essa chuva virá em direção a nave. então não
+              faz sentido as rochas virem na mesma direção em linha reta. Logo
+              entendemos que elas virão em um mesmo sentido no eixo x, porém no
+              eixo y, quando forem criadas, elas devem estar espalhadas ao
+              decorrer do eixo. Então precisamos gerar um número aleatório no
+              eixo para que o spawn seja em locais diferentes. utilizamos a
+              função, randomize() que reinicia o "contador rondomico do
+              sistema". e através do random_range é gerado um número no
+              intervalo desejado. Adicionamos uma variável para contabilizar as
+              vidas restantes. Também criamos uma variável que gerará um número
+              entre o intervalo solicitado, e esse será passado como parâmetro
+              para a criação das rochas setando a velocidade de cada uma, que no
+              caso ao lado é entre 1 e 5.
+              <br />
+              <br />
+              No evento etapa, como na imagem ao lado, iremos definir que o eixo
+              x, a cada etapa, será movido o número de passos definidos lá na
+              variável hsp, que no caso será nossa velocidade. Ou seja, a cada
+              etapa, o eixo x será movido hsp passos conforme foram gerados
+              aleatóriamente de 1 a 5. Pensando em outro ponto, as rochas virão
+              em direção a nave, e a nave pode desviar e tudo bem até ai certo?
+              Mas o que acontece com a rocha se passar o limite de tela do lado
+              esquerdo da tela? Ficará na eternidade? rs Levando isso em
+              consideração, vamos utilizar um if para verificar se o objeto
+              rocha, já alcançou a posição 0 do eixo x, e toda vez que isso
+              acontecer, o eixo x receberá o valor de 1400 (ou seja, quando
+              alcançar o limite de tela, o obejto será movido para o outro lado
+              da tela até que seja destruido ou destrua a nave).
+              <br />
+              <br />
+              Por falar em destruir a nave, vamos lidar agora com o o evento
+              colisão. Sabemos que quando a rocha atinge a nave, ela deve deve
+              ser destruida. Para isso vamos utilizar a função nativa
+              instance_destroy(other), no caso, ela diz que quando outro objeto
+              colidir com a rocha, o outro objeto será destuido. No código ao
+              lado, dizemos também que quando isso acontecer, a variável vida,
+              deve ser diminuida em 1, e utilizamos um if para verificar se a
+              vida for 0, a room deve ser reiniciada.
+              <br />
+              <br />
+              Tudo certo até aqui, já temos uma nave que se move, criará lasers
+              contínuos, rochas que se moverão contra a nave e se atingi-la ela
+              sumirá. Porém fizemos a criação de 1 rocha apenas. Para isso,
+              vamos utilizar a seguinte lógica, criaremos um objeto invisível
+              que ao ser instanciado iniciará sua funções. Para ser invisivel,
+              vamos criar um objeto com nome fCreateRocks e não vamos adicionar
+              sprint. No evento Criar, conforme vimos na foto ao lado, criamos
+              uma variável para criar o número de rochas, que no exemplo é 20.
+              Também criamos uma variável para adicionar um delay na função para
+              não criar as rochas todas de uma vez. Em seguida chamamos o evento
+              alarm[0] e dizemos que será chamado depois de 1 frame. No
+              alarm[0], vamos zerar o randomizador do sistema através da função
+              randomize(). Utilizaremos um if, para verificar quantas rochas
+              ainda restam para srem criadas. Se a quantidade restante de rochas
+              ainda for maior que zero, ela criará uma nova instância de Rocha,
+              passando os parâmetros: no eixo x, ela será criada em 1400, no
+              eixo y, será gerado um número entre 10 e 750, na cama Instances,
+              passando o objeto oRockMov. Após isso, ele diminui a quantidade em
+              1 no total de rochas. Em seguida de forma recursiva, ele chama a
+              função novamente só que dessa vez passando um valor randomico de
+              delay na criação. Caso o número de rochas restantes a serem
+              criadas seja 0, entramos no escopo else e desativamos o evento
+              alarm[0].
+              <br />
+              <br /></p
+          ></span>
+        </aside>
+
+        <aside class="section-tutorial-game" id="laser">
+          <span class="span-about-img jogo1 dev-img">
+            <img class="img-tutorial tuto" src="assets/img/laser1.png" alt="" />
+            <img class="img-tutorial tuto" src="assets/img/laser2.png" alt="" />
+          </span>
+
+          <span class="span-about"
+            ><p class="text-how-play">
+              Criando e Configurando o Laser <br /><br />
+              Estamos com a com a lógica do game quase pronta. Já temos todos os
+              elementos, porém ainda faltam falta algo. Precisamos criar o
+              objeto laser para que seja chamado na função que criamos na nave.
+              <br />
+              <br />
+              Como a nave já é responsável em definir a frequência da criação do
+              laser e seu movimento, o único evento que adicionaremos é o de
+              colisão. Conforme notamos no código oa lado, quando um laser
+              acertar uma rocha queremos que ela suma. Então para isso chamamos
+              a função nativa instance_destroy(other) passando como parâmetro o
+              outro objeto para sumir. Quando ele atinge, ela simplesmente some,
+              para não ficar sem graça, vamos adicionar um efeito de explosão qu
+              veremos a seguir. Por hora, chamamos a criação da instancia
+              explosão. Passamos como parâmetro: x e y de origem, a camada
+              Instances e o objeto criado explosão. Também atribuimos a uma
+              variavel global +1 para contabilizar a contagem para o proximo
+              nível.
+            </p></span
+          >
+        </aside>
+
+        <aside class="section-tutorial-game" id="explosion">
+          <span class="span-about-img jogo1 dev-img">
+            <img class="img-tutorial tuto" src="assets/img/laser1.png" alt="" />
+            <img class="img-tutorial tuto" src="assets/img/laser2.png" alt="" />
+          </span>
+
+          <span class="span-about"
+            ><p class="text-how-play">
+              Criando e Configurando a explosão <br /><br />
+              Como já temos a lógica explosão no objeto laser, precisamos apenas
+              criar o objeto baseado na sprint da explosão. O único vento que
+              deve acontecer é o término da animação, conforme na imagem ao
+              lado, usaremos o instance_destroy() e não passaremos nenhum
+              parâmetro. desse modo, o objeto se destrói ao final da animação.
+              <br />
+              <br /></p
+          ></span>
+        </aside>
+
+        <aside class="section-tutorial-game" id="score">
+          <span class="span-about-img jogo1 dev-img">
+            <img class="img-tutorial tuto" src="assets/img/score1.png" alt="" />
+            <img class="img-tutorial tuto" src="assets/img/score2.png" alt="" />
+            <img class="img-tutorial tuto" src="assets/img/score3.png" alt="" />
+          </span>
+
+          <span class="span-about"
+            ><p class="text-how-play">
+              Criando e Configurando a mecanica de score <br /><br />
+              Por último, vamos lidar com a mecanica de total de fases, e setar
+              a variável global nextLevel para controlar o próximo nível.
+              Criamos um objeto sem sprint para que fique invisível. <br />
+              No evento Criar, colocamos um if para verificar se o objeto ja foi
+              instanciado, dessa forma, certificamos que ele não seja criado
+              mais de uma vez atribuindo novos valores as variaveis
+              indesejadamente.
+              <br />
+              Também definimos a variavel nextLevel em 0 para que quando atingir
+              20 (total de rochas de um nivel) ela valide o if pertinente e em
+              seguida retorna a 0 para contagem do nivel e seguinte e assim
+              sucessivamente.
+              <br />
+              No evento Início de Jogo, definimos a variavel global.levels em 0,
+              e toda vez que as rochas acabarem, avança para o próximo nível e
+              ela é incrementada em 1. Dessa forma sabemos quando os mapas
+              chegaram ao final.
+              <br />
+              No evento etapa, colocamos um if para verificar se a quantidade de
+              rochas já são 20, quando chega a 20, ele entra no escopo, seta em
+              0 a variável para reinicia-la, incrementa o global.level em 1. E
+              novamente temos um outro if verificando se a quantidade de mapas
+              percorridos são menores que 5, se forem, avança para a próxima
+              fase, se não, o jogo encerra.
+              <br />
+              <br />
+              Com isso temos nosso simples RockWars feito, basta arrastar todos
+              os objetos para tela. Colocando todo o aprendizado obtido em aula
+              com Professor Mario da Silva de Jesus, na matéria de Laboratório
+              de Desenvolvimento Web, pelo curso de Desenvolvimento de Sistemas
+              Multiplataforma ofertado pela Fatec (Faculdade de Tecnologia do
+              Estado de São Paulo).
+              <br />
+              <br /></p
+          ></span>
+        </aside>
+      </section>
+    </main>
+    <a href="#container-header-id" class="btn-up">
+      <span class="material-symbols-outlined" style="font-size: 50px">
+        keyboard_double_arrow_up
+      </span></a
+    >
+  </body>
+</html>
